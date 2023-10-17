@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "v_button",
+  name: "vButton",
 };
 </script>

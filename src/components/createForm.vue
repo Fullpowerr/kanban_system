@@ -11,34 +11,34 @@
     >
       <div>
         <div class="flex flex-col p-4 items-center">
-          <v_input
+          <vInput
             class="m-2"
             v-model="product.title"
             type="text"
             placeholder="заголовок"
             maxlength=""
           />
-          <v_input
+          <vInput
             class="m-2"
             v-model="product.category"
             type="text"
             placeholder="категория"
             maxlength=""
           />
-          <v_input
+          <vInput
             class="m-2"
             v-model="product.description"
             type="text"
             placeholder="описание"
           />
-          <v_input
+          <vInput
             class="m-2"
             v-model="product.price"
             type="number"
             placeholder="цена"
             maxlength=""
           />
-          <v_input
+          <vInput
             class="m-2"
             v-model="product.rating"
             type="number"
@@ -46,10 +46,10 @@
             placeholder="рейтинг"
           />
         </div>
-        <v_button
+        <vButton
           @click="createProduct"
           class="bg-blue-500 text-white border-black"
-          >создать продукт</v_button
+          >создать продукт</vButton
         >
       </div>
     </div>
@@ -58,7 +58,7 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  name: "create_form",
+  name: "createForm",
   computed: {
     ...mapState({
       product: (state) => state.product,

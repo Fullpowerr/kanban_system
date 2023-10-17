@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "v_input",
+  name: "vInput",
   props: {
     modelValue: [String, Number, Object],
   },

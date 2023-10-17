@@ -43,7 +43,7 @@
 </template>
 <script>
 export default {
-  name: "card_product",
+  name: "cardProduct",
   data() {
     return {};
   },

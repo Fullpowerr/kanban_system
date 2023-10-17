@@ -1,7 +1,5 @@
 import { requestProducts } from "../Api/getApi.js";
-
 import { createStore } from "vuex";
-
 export default createStore({
   state: () => ({
     product: {
@@ -13,7 +11,6 @@ export default createStore({
       rating: { rate: 0, count: 0 },
       title: "",
     },
-
     products: [],
     products_at_work: [],
     completed_products: [],
@@ -120,7 +117,6 @@ export default createStore({
       }
     },
   },
-
   actions: {
     async fetchProducts({ commit }) {
       try {

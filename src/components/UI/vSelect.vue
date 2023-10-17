@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "select_sorted",
+  name: "vSelect",
   props: {
     options: {
       type: Array,

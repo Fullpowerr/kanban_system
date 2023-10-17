@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: "v_header",
+  name: "vHeader",
 };
 </script>
 <style scoped></style>
