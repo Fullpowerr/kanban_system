@@ -13,7 +13,7 @@ export default createStore({
     },
     products: [],
     products_at_work: [],
-    completed_products: [],
+    completedProducts: [],
     selectedFilter: "",
     filteredRatings: [
       { rate: 5, value: "5" },
@@ -23,8 +23,7 @@ export default createStore({
       { rate: 1, value: "от 1 до 2" },
     ],
     dialogCreateProduct: false,
-    editingShow: false,
-  }),
+      }),
   getters: {
     filter_by_rating(state) {
       if (!state.selectedFilter) {
@@ -70,16 +69,8 @@ export default createStore({
           edit: false,
         });
       }
-      (state.product.category = ""),
-        (state.product.title = ""),
-        (state.product.description = ""),
-        (state.product.id = ""),
-        (state.product.price = "");
-      (state.product.rating = {
-        rate: "",
-      }),
-        (state.dialogCreateProduct = false);
-    },
+      this.commit('closeDialogCreateShow')
+         },
     dialogCreateShow(state) {
       state.dialogCreateProduct = true;
     },
@@ -93,11 +84,11 @@ export default createStore({
     },
     edit_card_product(state, payload) {
       state.products_at_work[payload].editing = true;
-      state.editingShow = true;
+
     },
     save_edit_card_product(state, payload) {
       state.products_at_work[payload].editing = false;
-      state.editingShow = false;
+
     },
     push_at_work(state, payload) {
       state.product_at_work = { ...payload, editing: false };
@@ -108,7 +99,7 @@ export default createStore({
       }
     },
     push_list_completed(state, payload) {
-      state.completed_products.unshift(payload);
+      state.completedProducts.unshift(payload);
       state.element = state.products_at_work.findIndex(
         (el) => el.id === payload.id
       );

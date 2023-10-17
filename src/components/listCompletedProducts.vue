@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 p-3 h-auto bg-white" v-for="product in completed_products">
+  <div class="mt-10 p-3 h-auto bg-white" v-for="product in completedProducts">
     <cardProduct :product="product" />
   </div>
 </template>
@@ -9,7 +9,7 @@ export default {
   name: "listCompletedProducts",
   computed: {
     ...mapState({
-      completed_products: (state) => state.completed_products,
+      completedProducts: (state) => state.completedProducts,
     }),
   },
 };

@@ -21,8 +21,7 @@ export default {
     ...mapState({
       products_at_work: (state) => state.products_at_work,
       product: (state) => state.product,
-      editingShow: (state) => state.editingShow,
-      produt: (state) => state.product
+
     }),
   },
   methods: {
